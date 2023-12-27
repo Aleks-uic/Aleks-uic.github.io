@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/a170b42337.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                 </nav>
+    
+                <div class="header-text">
+                    <h1>Hi, I'm <span>Alexis</span> Alcazaren Jr. </h1>
+                    <h2>Web Developer</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="title">About Me</h1>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('bio')">Bio</p>
+                                <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                           <div class="tab-contents active-tab" id="bio">
+                            <ul>
+                                <li><span>Fullname:</span><br>Alexis Yanong Alcazaren Jr.</li>
+                                <li><span>Birthdate:</span><br>March 1,2001</li>
+                                <li><span>Birthplace:</span><br>Davao City</li>
+                                <li><span>Gender:</span><br>Male</li>
+                            </ul>
+                           </div>
+                           <div class="tab-contents" id="skills">
+                            <ul>
+                                <li><span>Programming Language:</span><br>HTML<br>CSS</li>
+                                <li><span>Others:</span><br>Adobe PS<br>Canva<br>MS Office</li>
+                            </ul>
+                           </div>
+                           <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Primary Education</span><br>St. Mary’s Initial Learning Experience</li>
+                                <li><span>Junior High school</span><br>Davao City Special National Highschool</li>
+                                <li><span>Senior High School</span><br>Davao Doctor’s College Inc</li>
+                                <li><span>2nd year Undergraduate of Bachelor of Science in 
+                                    Information Technology</span><br>University Of Immaculate Concepcion</li>
+                            </ul>
+                           </div>
+                           <a href="images/cv.pdf" download class="btn">Download CV</a>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+        <div id="service">
+            <div class="container">
+                <h1 class="title">My Services</h1>
+                <div class="list">
+                    <div>
+                        <h2>Web Design</h2>
+                        <p>I use my creative and software programming skills to design, build and develop websites.
+                            It is important to understand user experience to be able to build websites that are easy to understand, use, 
+                            and adhere to design standards.</p>
+                    </div>
+                    <div>
+                        <h2>Graphic Design</h2>
+                        <p>I visualize the aspects of websites, product packaging, advertisement posters, and many more.
+                            It is very important to adhere the clients request and to be able to capture viewers attention.</p>
+                    </div>
+                    <div>
+                        <h2>Office Admin Tasks</h2>
+                        <p>I offer assistance to perform admin tasks by setting up schedule, preparing, organasing storing Information
+                            in digital form. I also deals with queries on the phone and by email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="title">My Portfolio</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/1.png">
+                    </div>
+                    <div class="work">
+                        <img src="images/2.png">
+                    </div>
+                    <div class="work">
+                        <img src="images/3.png">
+                    </div>
+                    
+                </div>
+             </div>
+        </div>
+            
+    
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                            <h1 class="sub-title">Contact me</h1>
+                             <p><i class="fa-solid fa-paper-plane"></i> aalcazaren_210000001908@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i> (+63) 943 2531 300</p>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/jr.y.alcazaren/"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/jrlczrn/"><i class="fa-brands fa-twitter-square"></i></a>
+                                <a href="https://twitter.com/JrmuyKawaii"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                            
+                        </div>
+                </div>
+                <div class="copyright">
+                    <p>Copyright <span>@ AlexAlcazaren</span></p>
+                </div>
+             </div>
+         </div>
+
+    
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks)
+                tablink.classList.remove("active-link");
+                for(tabcontent of tabcontents)
+                tabcontent.classList.remove("active-tab");
+
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            
+        </script>
+    </body> 
+</html>
